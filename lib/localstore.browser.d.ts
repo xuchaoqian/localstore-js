@@ -10,4 +10,4 @@ export declare class IDBKeyValueImpl implements ILocalstore {
     remove(key: string): Promise<void>;
 }
 export declare function getImplInBrowser(): unknown;
-export declare const LocalStore: ReturnType<typeof getImplInBrowser>;
+export declare const Localstore: ReturnType<typeof getImplInBrowser>;

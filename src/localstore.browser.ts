@@ -31,5 +31,5 @@ export function getImplInBrowser(): unknown {
     : IDBKeyValueImpl;
 }
 
-export const LocalStore: ReturnType<typeof getImplInBrowser> =
+export const Localstore: ReturnType<typeof getImplInBrowser> =
   getImplInBrowser();

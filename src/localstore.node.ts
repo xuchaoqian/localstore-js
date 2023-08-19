@@ -1,16 +1,26 @@
 import { LocalStorage } from "node-localstorage";
 import { ILocalstore } from "./ilocalstore";
 
-const localStorage = new LocalStorage("./data/localstore.json");
+const globalWithLocalStorage = globalThis as unknown as {
+  localStorage: LocalStorage;
+};
+
+if (typeof globalWithLocalStorage.localStorage === "undefined") {
+  globalWithLocalStorage.localStorage = new LocalStorage("./data/localstore");
+}
 
 export class Localstore implements ILocalstore {
   get(key: string): Promise<string | undefined> {
-    return Promise.resolve(localStorage.getItem(key) ?? undefined);
+    return Promise.resolve(
+      globalWithLocalStorage.localStorage.getItem(key) ?? undefined
+    );
   }
   set(key: string, value: string): Promise<void> {
-    return Promise.resolve(localStorage.setItem(key, value));
+    return Promise.resolve(
+      globalWithLocalStorage.localStorage.setItem(key, value)
+    );
   }
   remove(key: string): Promise<void> {
-    return Promise.resolve(localStorage.removeItem(key));
+    return Promise.resolve(globalWithLocalStorage.localStorage.removeItem(key));
   }
 }
