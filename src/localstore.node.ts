@@ -1,7 +1,7 @@
 import { LocalStorage } from "node-localstorage";
 import { ILocalstore } from "./ilocalstore";
 
-const localStorage = new LocalStorage("./localstore.json");
+const localStorage = new LocalStorage("./data/localstore.json");
 
 export class Localstore implements ILocalstore {
   get(key: string): Promise<string | undefined> {
