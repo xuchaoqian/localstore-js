@@ -1,6 +1,6 @@
 {
   "name": "localstore",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Universal async localStorage-like API for Node, Browsers, WebWorker.",
   "author": "Chaoqian Xu <chaoranxu@gmail.com>",
   "license": "Apache License Version 2.0",

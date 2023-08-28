@@ -11,9 +11,8 @@ if (typeof globalWithLocalStorage.localStorage === "undefined") {
 
 export class Localstore implements ILocalstore {
   get(key: string): Promise<string | undefined> {
-    return Promise.resolve(
-      globalWithLocalStorage.localStorage.getItem(key) ?? undefined
-    );
+    const value = globalWithLocalStorage.localStorage.getItem(key);
+    return Promise.resolve(value !== null ? value : undefined);
   }
   set(key: string, value: string): Promise<void> {
     return Promise.resolve(

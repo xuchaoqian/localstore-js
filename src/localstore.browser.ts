@@ -3,7 +3,8 @@ import { ILocalstore } from "./ilocalstore";
 
 export class LocalStoreageImpl implements ILocalstore {
   get(key: string): Promise<string | undefined> {
-    return Promise.resolve(localStorage.getItem(key) ?? undefined);
+    const value = localStorage.getItem(key);
+    return Promise.resolve(value !== null ? value : undefined);
   }
   set(key: string, value: string): Promise<void> {
     return Promise.resolve(localStorage.setItem(key, value));
