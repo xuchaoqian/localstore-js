@@ -1,5 +1,5 @@
 {
-  "name": "localstore",
+  "name": "localstore-js",
   "version": "0.5.3",
   "description": "Universal async localStorage-like API for Node, Browsers, WebWorker.",
   "author": "Chaoqian Xu <chaoranxu@gmail.com>",
@@ -10,13 +10,13 @@
     "./lib/localstore.node.js": "./lib/localstore.browser.js",
     "./lib/localstore.node.d.ts": "./lib/localstore.browser.d.ts"
   },
-  "homepage": "https://github.com/xuchaoqian/localstore#readme",
+  "homepage": "https://github.com/xuchaoqian/localstore-js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xuchaoqian/localstore.git"
+    "url": "git+https://github.com/xuchaoqian/localstore-js.git"
   },
   "bugs": {
-    "url": "https://github.com/xuchaoqian/localstore/issues"
+    "url": "https://github.com/xuchaoqian/localstore-js/issues"
   },
   "scripts": {
     "build": "rm lib/* && npx tsc",
