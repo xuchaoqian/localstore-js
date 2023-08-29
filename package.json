@@ -1,5 +1,5 @@
 {
-  "name": "localstore-js",
+  "name": "@xuchaoqian/localstore-js",
   "version": "0.5.3",
   "description": "Universal async localStorage-like API for Node, Browsers, WebWorker.",
   "author": "Chaoqian Xu <chaoranxu@gmail.com>",
